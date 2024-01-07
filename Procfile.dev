@@ -1,0 +1,3 @@
+server: ./bin/hummingbird.js server
+#watch-css: npm run watch:css
+

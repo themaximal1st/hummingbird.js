@@ -1,19 +1,36 @@
 {
-  "name": "@themaximalist/hummingbird.js",
-  "version": "0.0.1",
-  "description": "Simple Web Framework",
-  "main": "src/index.js",
-  "scripts": {
-    "test": "mocha"
-  },
-  "keywords": [
-    "web",
-    "framework",
-    "htmx",
-    "express",
-    "tailwind",
-    "postgresql"
-  ],
-  "author": "The Maximalist",
-  "license": "MIT"
+    "name": "@themaximalist/hummingbird.js",
+    "version": "0.0.1",
+    "description": "Simple Web Framework",
+    "main": "src/index.js",
+    "type": "module",
+    "scripts": {
+        "dev": "nf -j Procfile.dev start",
+        "server": "node src/index.js"
+    },
+    "bin": {
+        "hummingbird": "bin/hummingbird"
+    },
+    "keywords": [
+        "web",
+        "framework",
+        "htmx",
+        "express",
+        "tailwind",
+        "postgresql"
+    ],
+    "author": "The Maximalist",
+    "license": "MIT",
+    "dependencies": {
+        "commander": "^11.1.0",
+        "debug": "^4.3.4",
+        "dotenv-extended": "^2.9.0",
+        "express": "^4.18.2"
+    },
+    "devDependencies": {
+        "exec-sh": "^0.4.0",
+        "foreman": "^3.0.1",
+        "nodemon": "^3.0.2",
+        "shelljs": "^0.8.5"
+    }
 }
