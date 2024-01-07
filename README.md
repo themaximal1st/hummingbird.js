@@ -15,6 +15,7 @@ It doesn't have to be this way.
 `Hummingbird.js` is a simple framework that makes it easy to build modern web applications. It's extremely opinionated, and relies on:
 
 * JavaScript — Same language on frontend and backend, no cognitive overhead
+* Express.js — Simple webserver
 * HTMX — Make client-side development look like server-side development
 * Tailwind — Simple universal CSS building blocks
 * Postgresql — A single database to handle everything
