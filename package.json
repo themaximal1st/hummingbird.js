@@ -1,0 +1,19 @@
+{
+  "name": "@themaximalist/hummingbird.js",
+  "version": "0.0.1",
+  "description": "Simple Web Framework",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "web",
+    "framework",
+    "htmx",
+    "express",
+    "tailwind",
+    "postgresql"
+  ],
+  "author": "The Maximalist",
+  "license": "MIT"
+}
