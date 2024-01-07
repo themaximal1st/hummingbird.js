@@ -8,7 +8,7 @@ Building web applications used to be easy. Users would submit forms, you'd handl
 
 Over time applications moved from the server to the client because it provided a better user experience. You could update parts of the page instead of the whole page.
 
-But in this switch, something happened. Your application became distributed. Your code size doubled. Your application became more brittle. Your code became littered with extra APIs, networking calls, caching and retries—all because you split your code base.
+But in this switch, something happened. Your application became distributed. Your code size doubled. Your application became more brittle. Your code became littered with extra APIs, networking calls, caching and retries—all because you wanted a better experience for your users.
 
 It doesn't have to be this way.
 
