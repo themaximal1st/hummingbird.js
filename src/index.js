@@ -5,14 +5,16 @@ const log = debug("hummingbird:server");
 
 import express from "express"
 
-import sequelize from "./sequelize.js"
-import Database from "./database.js"
+import * as middleware from "./middleware/index.js"
 
 export default class Hummingbird {
     constructor() {
         this.app = express();
         this.app.use(express.json());
+        this.app.use(express.urlencoded({ extended: true }));
+        this.app.use(middleware.htmx);
         this.app.use(express.static("public"));
+
         this.app.set("view engine", "ejs");
         this.port = process.env.PORT || 3000;
     }
@@ -32,11 +34,7 @@ export default class Hummingbird {
     }
 
     async start() {
-        await Database.initialize();
         await this.app.listen(this.port);
         log(`running on port ${this.port}`);
     }
 }
-
-Hummingbird.sequelize = sequelize;
-Hummingbird.Database = Database;
