@@ -5,7 +5,7 @@ const log = debug("hummingbird:server");
 
 import express from "express"
 
-import * as middleware from "./middleware/index.js"
+import * as middleware from "./middleware.js"
 
 export default class Hummingbird {
     constructor() {
@@ -13,6 +13,7 @@ export default class Hummingbird {
         this.app.use(express.json());
         this.app.use(express.urlencoded({ extended: true }));
         this.app.use(middleware.htmx);
+        this.app.use(middleware.queryLocals);
         this.app.use(express.static("public"));
 
         this.app.set("view engine", "ejs");
