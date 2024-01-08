@@ -1,2 +1,0 @@
-server: npm run watch:server
-css: npm run watch:css
