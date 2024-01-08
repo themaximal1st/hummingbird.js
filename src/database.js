@@ -3,7 +3,6 @@ const log = debug("hummingbird:database");
 
 import sequelize from "./sequelize.js"
 
-
 export default class Database {
     static async initialize(alter = true) {
         log("initializing");
