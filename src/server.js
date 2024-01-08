@@ -6,10 +6,19 @@ import express from "express"
 export default class Hummingbird {
     constructor() {
         this.app = express();
+        this.app.use(express.json());
+        this.app.set("view engine", "ejs");
         this.port = process.env.PORT || 3000;
-        this.app.get("/", (req, res) => {
-            res.send("Hello World!");
-        });
+    }
+
+    get(path, handler) {
+        if (typeof handler === "string") {
+            this.app.get(path, (req, res) => {
+                res.render(handler);
+            });
+        } else {
+            this.app.get(path, handler);
+        }
     }
 
     async start() {
