@@ -7,6 +7,7 @@ export default class Hummingbird {
     constructor() {
         this.app = express();
         this.app.use(express.json());
+        this.app.use(express.static("public"));
         this.app.set("view engine", "ejs");
         this.port = process.env.PORT || 3000;
     }

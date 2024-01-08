@@ -4,10 +4,7 @@
     "description": "Simple Web Framework",
     "main": "src/index.js",
     "type": "module",
-    "scripts": {
-        "dev": "bin/hummingbird dev",
-        "server": "bin/hummingbird server"
-    },
+    "scripts": {},
     "bin": {
         "hummingbird": "bin/hummingbird"
     },
@@ -22,6 +19,8 @@
     "author": "The Maximalist",
     "license": "MIT",
     "dependencies": {
+        "@tailwindcss/forms": "^0.5.7",
+        "@tailwindcss/typography": "^0.5.10",
         "commander": "^11.1.0",
         "debug": "^4.3.4",
         "dotenv-extended": "^2.9.0",
@@ -33,6 +32,18 @@
         "foreman": "^3.0.1",
         "nodemon": "^3.0.2",
         "shelljs": "^0.8.5",
-        "shelljs-live": "^0.0.5"
+        "shelljs-live": "^0.0.5",
+        "tailwindcss": "^3.4.1"
+    },
+    "hummingbird": {
+        "dependencies": [
+            "tailwindcss",
+            "@tailwindcss/forms",
+            "@tailwindcss/typography",
+            "foreman",
+            "nodemon",
+            "debug",
+            "dotenv-extended"
+        ]
     }
 }
