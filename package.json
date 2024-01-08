@@ -5,8 +5,8 @@
     "main": "src/index.js",
     "type": "module",
     "scripts": {
-        "dev": "nf -j Procfile.dev start",
-        "server": "node src/index.js"
+        "dev": "bin/hummingbird dev",
+        "server": "bin/hummingbird server"
     },
     "bin": {
         "hummingbird": "bin/hummingbird"
@@ -31,6 +31,7 @@
         "exec-sh": "^0.4.0",
         "foreman": "^3.0.1",
         "nodemon": "^3.0.2",
-        "shelljs": "^0.8.5"
+        "shelljs": "^0.8.5",
+        "shelljs-live": "^0.0.5"
     }
 }
