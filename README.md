@@ -19,4 +19,5 @@ It doesn't have to be this way.
 * HTMX — Make client-side development look like server-side development
 * Tailwind — Simple universal CSS building blocks
 * Postgresql — A single database to handle everything
+* Sequelize - Database ORM
 
