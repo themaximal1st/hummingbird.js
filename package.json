@@ -1,6 +1,6 @@
 {
     "name": "@themaximalist/hummingbird.js",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Simple Web Framework",
     "main": "src/index.js",
     "type": "module",

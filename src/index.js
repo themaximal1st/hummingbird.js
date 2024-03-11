@@ -15,7 +15,11 @@ export default class Hummingbird {
         this.app = express();
         this.app.use(session(middleware.sessionConfig(this.app)));
         this.app.use(flash({ sessionKeyName: "flash" }));
-        this.app.use(express.json());
+        this.app.use(express.json({
+            verify: (req, res, buf) => {
+                req.rawBody = buf
+            }
+        }));
         this.app.use(express.urlencoded({ extended: true }));
         this.app.use(middleware.htmx);
         this.app.use(middleware.queryLocals);
